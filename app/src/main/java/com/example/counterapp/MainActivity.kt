@@ -17,6 +17,29 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            CounterApp()
+        }
+    }
+}
+
+@Composable
+fun CounterApp() {
+    var counter by remember { mutableIntStateOf(0) }
+
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxSize()
+    ) {
+        Text(text = "$counter", fontSize = 24.sp, modifier = Modifier.padding(bottom = 20.dp))
+
+        Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+            Button(onClick = "") {
+                Text("Increment")
+            }
+            Button(onClick = "") {
+                Text("Decrement")
+            }
         }
     }
 }
