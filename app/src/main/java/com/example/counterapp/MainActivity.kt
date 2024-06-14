@@ -26,6 +26,14 @@ class MainActivity : ComponentActivity() {
 fun CounterApp() {
     var counter by remember { mutableIntStateOf(0) }
 
+    val incrementCounter = {
+        counter += 1
+    }
+
+    val decrementCounter = {
+        counter -= 1
+    }
+
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
@@ -34,10 +42,10 @@ fun CounterApp() {
         Text(text = "$counter", fontSize = 24.sp, modifier = Modifier.padding(bottom = 20.dp))
 
         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-            Button(onClick = "") {
+            Button(onClick = incrementCounter) {
                 Text("Increment")
             }
-            Button(onClick = "") {
+            Button(onClick = decrementCounter) {
                 Text("Decrement")
             }
         }
