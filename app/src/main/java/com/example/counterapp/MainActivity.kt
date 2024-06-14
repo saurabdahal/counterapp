@@ -50,9 +50,9 @@ fun CounterApp() {
 
         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
             Button(onClick = incrementCounter,
-                colors = ButtonDefaults.buttonColors(containerColor = Color.LightGray)
+                colors = ButtonDefaults.buttonColors(containerColor = Color.Blue)
             ) {
-                Text("Increase", style = TextStyle(color = Color.Black))
+                Text("Increase", style = TextStyle(color = Color.White))
             }
             Button(onClick = decrementCounter,
                 colors = ButtonDefaults.buttonColors(containerColor = Color.DarkGray)
